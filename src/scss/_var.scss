@@ -1,0 +1,48 @@
+//default colours
+$black: #000;
+$white: #FFF;
+
+//layout colours
+$primary: #FFBD13;
+$secondary: #3670C7;
+$secondaryLight: #38C0EB;
+$danger: #ff0000;
+$pink: #F91155;
+$gray: #525252;
+$lightGray: #8f8f8f;
+$darkGray: #2D2D2D;
+$searchBg: #EFEFEF;
+
+//Media queries
+$tablet: 760px;
+$laptop: 1000px;
+$desktop: 1770px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin font($name, $weight) {
+  font: {
+    family: $name;
+    weight: $weight;
+    display: swap;
+  }
+  src: url("../assets/fonts/#{ $name }-#{ $weight }.woff2")  format("woff2"),
+    url("../assets/fonts/#{ $name }-#{ $weight }.woff")  format("woff"),
+}
+

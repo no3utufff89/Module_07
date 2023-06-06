@@ -1,0 +1,136 @@
+.profit {
+  padding-top: 60px;
+  padding-bottom: 35px;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include laptop {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  @include desktop {
+    padding-top: 70px;
+  }
+}
+.profit__title {
+  margin-bottom: 26px;
+  @include tablet {
+    margin-bottom: 30px;
+  }
+  @include laptop {
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+.profit-goods-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+  }
+  @include laptop {
+    row-gap: 50px;
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+  }
+}
+.profit-card__image {
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  height: 130px;
+  @include tablet {
+    height: 216px;
+    margin-bottom: 15px;
+  }
+  @include laptop {
+    height: 295px;
+    margin-bottom: 20px;
+  }
+}
+.price {
+  margin-bottom: 4px;
+  display: flex;
+  column-gap: 16px;
+  @include tablet {
+    margin-bottom: 13px;
+  }
+  @include laptop {
+    margin-bottom: 15px;
+    column-gap: 28px;
+  }
+}
+.new-price, .old-price {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.new-price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  @include tablet {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  @include laptop {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+.old-price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration-line: line-through;
+  @include tablet {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  @include laptop {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.profit-card__title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  @include tablet {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  @include laptop {
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+.promo-sticker_profit {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  @include tablet {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 26px;
+    left: 10px;
+    bottom: 10px;
+  }
+  @include laptop {
+    width: 88px;
+    height: 88px;
+    font-size: 30px;
+    line-height: 39px;
+    left: 20px;
+    bottom: 20px;
+  }
+}
