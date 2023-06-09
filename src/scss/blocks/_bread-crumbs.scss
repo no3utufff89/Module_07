@@ -1,0 +1,40 @@
+.bread-crumbs-list {
+    display: flex;
+    column-gap: 38px;
+}
+.bread-crumbs__item {
+    position: relative;
+  &:first-child:before {
+    background-image: none;
+  }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -25px;
+      transform: translateY(-50%);
+      display: block;
+      background-image: url(../assets/icons/arrow.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 11px;
+      height: 11px;
+    }}
+
+
+.bread-crumbs__link {
+  color: $gray;
+  font-size: 8px;
+  line-height: 10px;
+  font-weight: 700;
+  display: block;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @include laptop {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
