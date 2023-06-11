@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Статья</title>
+  <link rel="stylesheet" href="css/index.min.css">
+
+  <script type="module" src="js/index.min.js"></script>
+</head>
+<body>
+<!--=include header.html -->
+<main>
+  <section class="section bread-crumbs-section">
+    <div class="container">
+      <ul class="bread-crumbs-list">
+        <li class="bread-crumbs__item">
+          <a href="/" class="bread-crumbs__link">Главная</a>
+        </li>
+        <li class="bread-crumbs__item">
+          <a href="blog.html" class="bread-crumbs__link">Блог</a>
+        </li>
+        <li class="bread-crumbs__item">
+          <a href="#" class="bread-crumbs__link"></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section article-section">
+    <div class="container">
+      <div class="article-content article">
+        <div class="article-content__main">
+          <h1 class="article__title">
+
+          </h1>
+          <p class="article__text">
+          </p>
+          <div class="article-footer">
+            <a class="article-footer__link" href="blog.html">
+              <svg class="back-icon" width="24" height="24">
+                <use href="./img/sprite.svg#left"></use>
+              </svg>
+              К списку статей</a>
+            <div class="article-card__content">
+              <p class="author">Инга Соловьева</p>
+              <div class="article-card__time-info article-footer__info">
+                <div class="card-date">
+                  <span class="card-date__date">25</span>
+                  <span class="card-date__month">октября</span>
+                  <span class="card-date__year">2021</span>,
+                </div>
+                <div class="card-time">
+                  <span class="card-time__hour">12</span>
+                  :
+                  <span class="card-time__minute">45</span>
+                </div>
+              </div>
+              <div class="blog-card__stat">
+                <div class="views">
+                  <svg class="blogs-list__icon icon" width="24" height="25">
+                    <use class="views-icon" href="./img/sprite.svg#eye-icon"></use>
+                  </svg>
+                  <span class="views-number">
+                                    1.2
+                                </span>
+                  к
+                </div>
+                <div class="comments">
+                  <svg class="blogs-list__icon icon" width="24" height="24">
+                    <use class="comments-icon" href="./img/sprite.svg#chat-icon"></use>
+                  </svg>
+                  <span class="comments-number">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-content__sidebar sidebar">
+          <a href="#" class="sidebar-link">
+            <img src="./img/article_01.png" alt="Картинка" class="sidebar-link__img" width="532" height="328">
+            <div class="sidebar__offer offer">
+              <h3 class="offer__title">
+                Горящие туры в Стамбул
+                от 20 000 руб.
+              </h3>
+              <p class="offer__desc">
+                Окунись в настоящую восточную сказку
+              </p>
+            </div>
+          </a>
+          <a href="#" class="sidebar-link">
+            <img src="./img/article_02.png" alt="Картинка" class="sidebar-link__img" width="532" height="328">
+            <div class="sidebar__offer offer">
+              <h3 class="offer__title">
+                Новый RENAULT DUSTER
+              </h3>
+              <p class="offer__desc">
+                Легендарный внедорожник в новом дизайне
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!--=include footer.html -->
+
+</body>
+</html>

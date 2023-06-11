@@ -104,27 +104,93 @@
     margin-right: 99px;
   }
 }
-
-.header__menu-btn::before {
-  position: absolute;
-  top: 51%;
-  left: 16px;
-  content: "";
-  transform: translateY(-50%);
-  background-image: url(../assets/icons/menu-icon.svg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 14px;
-  height: 14px;
-  background-size: contain;
+.header__menu-btn.active>.menu-btn__line {
+opacity: 0;
+}
+.header__menu-btn.active:before {
+transform: translateY(4px) rotate(45deg);
+  width: 11px;
   @include tablet {
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    transform: translateY(6px) rotate(45deg);
+
   }
   @include laptop {
-    left: 30px;
+    width: 18px;
+    transform: translateY(4px) rotate(45deg);
   }
 }
+.header__menu-btn.active:after {
+  width: 11px;
+  transform: translateY(-4px) rotate(-45deg);
+  @include tablet {
+    width: 14px;
+    transform: translateY(-6px) rotate(-45deg);
+
+  }
+  @include laptop {
+    width: 18px;
+  }
+}
+.menu-btn__line {
+  position: absolute;
+  left: 17px;
+  width: 7px;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $white;
+  opacity: 1;
+  transition: transform .24s ease-in-out;
+  @include tablet {
+    left: 24px;
+    width: 12px;
+  }
+  @include laptop {
+    left: 33px;
+    width: 12px;
+  }
+}
+.header__menu-btn::before,.header__menu-btn:after{
+  content: "";
+  position: absolute;
+  left: 17px;
+  height: 2px;
+  background-color: $white;
+  transition: transform .24s ease-in-out, top .24s ease-in-out;
+  @include tablet {
+    left: 24px;
+  }
+  @include laptop {
+    left: 33px;
+  }
+
+
+}
+.header__menu-btn::before {
+  top: 10px;
+  width: 11px;
+  @include tablet {
+    top: 14px;
+    width: 18px;
+  }
+  @include laptop {
+    top: 21px;
+  }
+}
+.header__menu-btn:after {
+  width: 4px;
+  bottom: 10px;
+  @include tablet {
+    bottom: 14px;
+    width: 6px;
+  }
+  @include laptop {
+    bottom: 21px;
+  }
+
+}
+
 
 
 /*=======*/

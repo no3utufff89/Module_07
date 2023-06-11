@@ -4,6 +4,8 @@
 }
 .bread-crumbs__item {
     position: relative;
+  display: flex;
+  align-items: center;
   &:first-child:before {
     background-image: none;
   }

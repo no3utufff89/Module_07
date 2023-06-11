@@ -119,6 +119,7 @@
 }
 .views,.comments {
   display: flex;
+  align-items: center;
   @include tablet {
     align-self: center;
   }

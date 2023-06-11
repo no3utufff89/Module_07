@@ -143,13 +143,13 @@
 }
 /* Картинки промо карточек*/
 .promo-list__link_books {
-  background-image: url('../../img/books.png');
-  background-image: -webkit-image-set(  url('../../img/books.png')1x);
+  background-image: url('../img/books.png');
+  background-image: -webkit-image-set(  url('../img/books.png')1x);
 
   background-image: image-set(
-                  url('../../img/books.png')  1x,
-                  url('../../img/books.webp') 1x,
-                  url('../../img/books.avif') 1x)
+
+                  url('../img/books.webp') 1x,
+                  url('../img/books.avif') 1x)
 ;
   justify-content: flex-end;
   @include tablet {
@@ -163,7 +163,14 @@
 
 }
 .promo-list__link_sale {
-  background-image: url(../../img/sale.png);
+  background-image: url(../img/sale.png);
+  background-image: -webkit-image-set(  url('../img/sale.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/sale.webp') 1x,
+                  url('../img/sale.avif') 1x)
+;
   padding-top: 28px;
   @include tablet {
     padding-top: 15px;
@@ -176,14 +183,32 @@
 
 }
 .promo-list__link_shoes {
-  background-image: url(../../img/shoes.png);
+  background-image: url(../img/shoes.png);
+  background-image: -webkit-image-set(  url('../img/shoes.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/shoes.webp') 1x,
+                  url('../img/shoes.avif') 1x)
 }
 .promo-list__link_shoes-sale {
-  background-image: url(../../img/shoes-sale.png);
+  background-image: url(../img/shoes-sale.png);
+   background-image: -webkit-image-set(  url('../img/shoes-sale.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/shoes-sale.webp') 1x,
+                  url('../img/shoes-sale.avif') 1x);
   justify-content: flex-end;
 }
 .promo-list__link_gifts {
-  background-image: url(../../img/gifts.png);
+  background-image: url(../img/gifts.png);
+   background-image: -webkit-image-set(  url('../img/gifts.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/gifts.webp') 1x,
+                  url('../img/gifts.avif') 1x);
   justify-content: flex-end;
   @include tablet {
     padding-right: 143px;
@@ -198,24 +223,54 @@
 
 }
 .promo-list__link_electronics {
-  background-image: url(../../img/electronics.png);
+  background-image: url(../img/electronics.png);
+  background-image: -webkit-image-set(  url('../img/electronics.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/electronics.webp') 1x,
+                  url('../img/electronics.avif') 1x);
   justify-content: flex-end;
   padding-bottom: 16px;
 
 }
 .promo-list__link_dress {
-  background-image: url(../../img/dress.png);
+  background-image: url(../img/dress.png);
+  background-image: -webkit-image-set(  url('../img/dress.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/dress.webp') 1x,
+                  url('../img/dress.avif') 1x);
   @include tablet {
-    background-image: url(../../img/dress-small.png);
+    background-image: url(../img/dress-small.png);
+    background-image: -webkit-image-set(  url('../img/dress-small.png')1x);
+
+    background-image: image-set(
+
+                    url('../img/dress-small.webp') 1x,
+                    url('../img/dress-small.avif') 1x);
     background-size: 100%;
     background-position: center top;
   }
   @include laptop {
-    background-image: url(../../img/dress.png);
+    background-image: url(../img/dress.png);
+    background-image: -webkit-image-set(  url('../img/dress.png')1x);
+
+    background-image: image-set(
+
+                    url('../img/dress.webp') 1x,
+                    url('../img/dress.avif') 1x);
   }
 }
 .promo-list__link_chemicals {
-  background-image: url(../../img/chemicals.png);
+  background-image: url(../img/chemicals.png);
+  background-image: -webkit-image-set(  url('../img/chemicals.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/chemicals.webp') 1x,
+                  url('../img/chemicals.avif') 1x);
   justify-content: flex-end;
   font-size: 11px;
   text-align: center;
@@ -243,16 +298,40 @@
 
 }
 .promo-list__link_decorations {
-  background-image: url(../../img/decorations.png);
+  background-image: url(../img/decorations.png);
+   background-image: -webkit-image-set(  url('../img/decorations.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/decorations.webp') 1x,
+                  url('../img/decorations.avif') 1x);
   @include tablet {
-    background-image: url(../../img/decorations-small.png);
+    background-image: url(../img/decorations-small.png);
+     background-image: -webkit-image-set(  url('../img/decorations-small.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/decorations-small.webp') 1x,
+                  url('../img/decorations-small.avif') 1x);
   }
   @include laptop {
-    background-image: url(../../img/decorations.png);
+    background-image: url(../img/decorations.png);
+     background-image: -webkit-image-set(  url('../img/decorations.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/decorations.webp') 1x,
+                  url('../img/decorations.avif') 1x);
   }
 }
 .promo-list__link_new-year {
-  background-image: url(../../img/newYear.png);
+  background-image: url(../img/newYear.png);
+  background-image: -webkit-image-set(  url('../img/newYear.png')1x);
+
+  background-image: image-set(
+
+                  url('../img/newYear.webp') 1x,
+                  url('../img/newYear.avif') 1x);
   justify-content: flex-end;
   @include laptop {
     padding-left: 30px;
