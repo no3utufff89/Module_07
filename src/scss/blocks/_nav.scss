@@ -6,9 +6,13 @@
   display: none;
   @include tablet {
     padding-top: 30px;
+    padding-left: 34px;
+    padding-right: 34px;
   }
   @include laptop {
     padding-top: 40px;
+    padding-left: 42px;
+    padding-right: 42px;
   }
   @include desktop {
     padding-top: 52px;
