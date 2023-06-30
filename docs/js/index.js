@@ -5211,7 +5211,7 @@ const mountComponents = path => {
   if (path === '/' || path === '/Module_07/index.html') {
     renderProfitProducts();
   }
-  if (path === '/category.html') {
+  if (path === '/Module_07/category.html') {
     document.title = `ShopOnline - ${new URLSearchParams(window.location.search).get('category')}`;
     renderCategoryProducts();
     document.querySelector('main').append(createBreadCrumbs([{
