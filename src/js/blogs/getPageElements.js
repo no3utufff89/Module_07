@@ -4,6 +4,7 @@ export const getPageElements = () => {
     const paginationBlock = document.querySelector('.pagination');
     const paginationArrow = document.querySelectorAll('.pagination__arrow');
 
+
     return {
         blogsList,
         paginationBlock,

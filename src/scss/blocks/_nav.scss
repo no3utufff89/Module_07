@@ -150,7 +150,7 @@
 .catalog-list {
 @include desktop {
   display: grid;
-  grid-template-columns: minmax(225px, max-content) minmax(225px, max-content);
+  grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
   column-gap: 30px;
 
 }

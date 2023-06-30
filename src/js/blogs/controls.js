@@ -30,7 +30,7 @@ try {
             }
         }
         if ( target.closest('.pagination__arrow_right')) {
-            page = getPageNumber();
+            let {page} = getPageNumber();
             page++
             window.history.pushState(
                 {},

@@ -45,7 +45,7 @@
 }
 .profit-card__image {
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 8px;
   height: 130px;
   @include tablet {

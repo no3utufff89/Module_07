@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="css/index.min.css">
+
+  <script type="module" src="js/index.min.js"></script>
+</head>
+<body class="cart-page">
+<!--=include header.html -->
+<main class="main">
+  <section class="section cart-section">
+    <div class="cart-section-container">
+      <div class="cart-block cart-products">
+        <div class="cart-header">
+          <p class="cart-block__title page-title">
+            Корзина
+          </p>
+          <span class="cart-number">2</span>
+        </div>
+        <div class="cart-products__controls">
+          <label class="checkAll-label" for="checkAll">
+            <input type="checkbox" class="cart-input-checkbox checkAll-input cart-checkbox" id="checkAll" checked>
+            Выбрать все
+          </label>
+          <button class="btn deleteAll-btn" aria-label="Удать выбранные товары">
+            <svg class="cart-icon icon delete-icon cart-products__controls-icon" width="30" height="30">
+              <use href="./img/sprite.svg#delete"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="cart-list">
+<!--          <li class="cart-list__item cart-product">-->
+<!--            <input type="checkbox" aria-label="Выбрать товар" class="cart-input-checkbox product-checkbox" checked="checked">-->
+<!--            <img src="./img/cart-prod-demo.png" alt="Картинка товара" class="cart-product__image">-->
+<!--            <p class="cart-product__title">-->
+<!--              15.6" Игровой ноутбук ASUS G513IE-HN004T-->
+<!--            </p>-->
+<!--            <div class="cart-product__controls">-->
+<!--              <div class="amount-controls">-->
+<!--                <button class="btn cart-product-min-btn">-</button>-->
+<!--                <span class="cart-product-amount">1</span>-->
+<!--                <button class="btn cart-product-plus-btn">+</button>-->
+<!--              </div>-->
+<!--              <button class="btn product-delete-btn" aria-label="Удать товар">-->
+<!--                <svg class="cart-icon icon delete-icon cart-product_delete-icon" width="30" height="30">-->
+<!--                  <use href="./img/sprite.svg#delete"></use>-->
+<!--                </svg>-->
+<!--              </button>-->
+<!--            </div>-->
+<!--            <div class="cart-product__price">-->
+<!--              <div class="cart-price">-->
+<!--                <div class="new-cart-price">-->
+<!--                  <p class="new-cart-price__text">-->
+<!--                    109 090-->
+<!--                  </p>-->
+<!--                  <p class="cart-price__currency">-->
+<!--                    ₽-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--                <div class="old-cart-price">-->
+<!--                  <p class="old-cart-price__text">-->
+<!--                    150 090-->
+<!--                  </p>-->
+<!--                  <p class="cart-price__currency">-->
+<!--                    ₽-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <p class="cart-credit-text">-->
+<!--                В кредит от 5600 ₽-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="cart-list__item cart-product">-->
+<!--            <input type="checkbox" aria-label="Выбрать товар" class="cart-input-checkbox product-checkbox" checked="checked">-->
+<!--            <img src="./img/cart-prod-demo.png" alt="Картинка товара" class="cart-product__image">-->
+<!--            <p class="cart-product__title">-->
+<!--              15.6" Игровой ноутбук ASUS G513IE-HN004T-->
+<!--            </p>-->
+<!--            <div class="cart-product__controls">-->
+<!--              <div class="amount-controls">-->
+<!--                <button class="btn cart-product-min-btn">-</button>-->
+<!--                <span class="cart-product-amount">1</span>-->
+<!--                <button class="btn cart-product-plus-btn">+</button>-->
+<!--              </div>-->
+<!--              <button class="btn product-delete-btn" aria-label="Удать товар">-->
+<!--                <svg class="cart-icon icon delete-icon cart-product_delete-icon" width="30" height="30">-->
+<!--                  <use href="./img/sprite.svg#delete"></use>-->
+<!--                </svg>-->
+<!--              </button>-->
+<!--            </div>-->
+<!--            <div class="cart-product__price">-->
+<!--              <div class="cart-price">-->
+<!--                <div class="new-cart-price">-->
+<!--                  <p class="new-cart-price__text">-->
+<!--                    109 090-->
+<!--                  </p>-->
+<!--                  <p class="cart-price__currency">-->
+<!--                    ₽-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--                <div class="old-cart-price">-->
+<!--                  <p class="old-cart-price__text">-->
+<!--                    150 090-->
+<!--                  </p>-->
+<!--                  <p class="cart-price__currency">-->
+<!--                    ₽-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <p class="cart-credit-text">-->
+<!--                В кредит от 5600 ₽-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </li>-->
+        </ul>
+      </div>
+      <div class="cart-block cart-delivery delivery">
+        <div class="cart-delivery-header">
+          <p class="cart-delivery__title">
+            Способ доставки
+          </p>
+          <button class="btn cart-change-btn">Изменить</button>
+        </div>
+        <div class="cart-delivery-row">
+          <div class="delivery-address">
+            <p class="delivery-label">
+              Пункт выдачи
+            </p>
+            <p class="delivery-address__text">
+              г. Москва (Московская область), улица Павлика Морозова, д. 48, (Пункт выдачи), Ежедневно 10:00-21:00
+            </p>
+          </div>
+          <div class="delivery-price">
+            <p class="delivery-label">
+              Стоимость доставки
+            </p>
+            <p class="delivery-price__text">
+              Бесплатная доставка
+            </p>
+          </div>
+        </div>
+        <div class="delivery-details">
+          <p class="delivery-date">
+            10-13 января
+          </p>
+          <div class="delivery-details__img-block">
+<!--            <img src="./img/cart-prod-demo.png" alt="Картинка товара" class="delivery-img small-prod-image" width="80" height="80">-->
+<!--            <img src="./img/cart-prod-demo.png" alt="Картинка товара" class="delivery-img small-prod-image" width="80" height="80">-->
+          </div>
+
+        </div>
+      </div>
+      <div class="cart-block cart-result">
+        <div class="cart-result-header">
+          <p class="cart-result__title">
+            Итого
+          </p>
+          <p class="result-sum">
+            112 992 ₽
+          </p>
+        </div>
+        <div class="cart-result-details">
+          <div class="result-products">
+            <p class="result-label">Товары, <span class="result-amount">2 шт</span></p>
+            <p class="result-no-discount-price">145 080 ₽</p>
+          </div>
+          <div class="result-discount">
+            <p class="result-label">Скидка</p>
+            <p class="discount-number">32 088 ₽</p>
+          </div>
+          <div class="result-delivery-details">
+            <p class="result-label">Доставка</p>
+            <p class="delivery-type">Бесплатно</p>
+          </div>
+
+        </div>
+        <div class="result-delivery">
+          <div class="result-delivery-row">
+            <p class="result-delivery__label">Доставка</p>
+            <p class="delivery-method colored">Пункт выдачи</p>
+          </div>
+
+          <p class="result-delivery-worktime">Ежедневно 10:00 - 21:00</p>
+          <p class="result-delivery-address">г. Москва (Московская область), улица Павлика Морозова, д. 48</p>
+          <div class="result-delivery-row">
+            <p class="result-delivery__label date-label">Дата</p>
+            <p class="delivery-date colored">10-13 января</p>
+          </div>
+         <div class="result-delivery-row">
+           <p class="result-delivery__label payment">Оплата</p>
+           <p class="payment-method colored">Картой</p>
+         </div>
+
+        </div>
+        <button class="btn cart-submit-btn" type="submit">Заказать</button>
+        <div class="agreement-block">
+          <input type="checkbox" aria-label="Согласен" class="cart-input-checkbox agreement-checkbox" checked>
+          <p class="agreement-label">Согласен с условиями
+            <a href="#" class="agreement-link agreement-link__rules">правил пользования торговой площадкой</a> и
+            <a href="#" class="agreement-link agreement-link__buyback">правилами возврата</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--    <picture>-->
+  <!--      <source srcset="img/1984-768.avif" type="image/avif" media="(min-width: 768px)">-->
+  <!--      <source srcset="img/1984.avif" type="image/avif">-->
+  <!--      <source srcset="img/1984-768.webp" type="image/webp" media="(min-width: 768px)">-->
+  <!--      <source srcset="img/1984.webp" type="image/webp">-->
+  <!--      <source srcset="img/1984-768.jpg" media="(min-width: 768px)">-->
+  <!--      <img src="img/1984.jpg" alt="">-->
+  <!--    </picture>-->
+
+</main>
+<!--=include footer.html -->
+
+</body>
+</html>

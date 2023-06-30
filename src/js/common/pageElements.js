@@ -6,6 +6,8 @@ export const pageElements = () => {
     const menuArrowBtn = document.querySelectorAll('.menu-item__btn-open');
     const menuBtn = document.querySelector('.menu-btn');
     const headerNav = document.querySelector('.header__nav');
+
+
     return {
         headerMenuItem,
         menuItemBlock,
@@ -13,5 +15,6 @@ export const pageElements = () => {
         menuArrowBtn,
         menuBtn,
         headerNav,
+
     }
 }

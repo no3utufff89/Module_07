@@ -8,6 +8,7 @@
   }
   @include desktop {
     padding-bottom: 150px;
+    padding-top: 20px;
 
   }
 }
@@ -110,17 +111,21 @@ border-bottom: 1px solid $secondaryLightGray;
     margin-bottom: 0;
   }
 }
+.no-discount-price {
+  color: inherit;
+}
 .prod__image {
+  margin: 0 auto;
   @include tablet {
-    width: 380px;
+    width: auto;
     height: 213px;
   }
   @include laptop {
-    width: 540px;
+    width: auto;
     height: 303px;
   }
   @include desktop {
-    width: 757px;
+    width: auto;
     height: 427px;
   }
 }
@@ -240,12 +245,15 @@ border-bottom: 1px solid $secondaryLightGray;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+
   @include tablet {
     font-size: 28px;
     line-height: 34px;
   }
   &_red {
     color: $danger;
+    display: flex;
+    align-items: center;
   }
   &_common {
     font-weight: 400;
@@ -253,6 +261,7 @@ border-bottom: 1px solid $secondaryLightGray;
     line-height: 14px;
     text-decoration-line: line-through;
     color: $darkGray;
+
     @include tablet {
       font-size: 18px;
       line-height: 22px;
