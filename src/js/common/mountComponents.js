@@ -8,9 +8,10 @@ import {createBreadCrumbs} from "../modules/builder.js";
 import {renderShoppingCart} from "../cartActions/renderShoppingCart.js";
 
 export const mountComponents = (path) => {
+
     const category = new  URLSearchParams(window.location.search).get('category')
     const title = new  URLSearchParams(window.location.search).get('title')
-    if (path === '/' || path === '/index.html') {
+    if (path === '/' || path === '/Module_07/index.html') {
 
         renderProfitProducts()
     }
@@ -24,7 +25,7 @@ export const mountComponents = (path) => {
             ]
         ))
     }
-    if (path === '/card.html') {
+    if (path === '/Module_07/card.html') {
         document.title = new  URLSearchParams(window.location.search).get('title');
         renderCurrentProduct()
 
@@ -36,7 +37,7 @@ export const mountComponents = (path) => {
         renderFeaturedProducts()
     }
 
-    if (path === '/shoping-cart.html') {
+    if (path === '/Module_07/shoping-cart.html') {
         renderShoppingCart()
         renderProfitProducts()
 
