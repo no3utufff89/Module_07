@@ -157,6 +157,10 @@ border-bottom: 1px solid $secondaryLightGray;
     padding-bottom: 40px;
     padding-left: 34px;
     padding-right: 34px;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+
   }
   @include laptop {
     padding-left: 42px;
@@ -164,13 +168,19 @@ border-bottom: 1px solid $secondaryLightGray;
     padding-top: 50px;
     padding-bottom: 50px;
     column-gap: 100px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
   }
   @include desktop {
     grid-template-columns: minmax(auto, 757px) minmax(400px, 420px);
     column-gap: 116px;
     justify-content: space-between;
-    padding-left: 75px;
-    padding-right: 75px;
+    //padding-left: 75px;
+    //padding-right: 75px;
+    max-width: 1770px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .description {

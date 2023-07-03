@@ -7,6 +7,7 @@ export const openMenu = () => {
             menuArrowBtn,
             headerSubMenuList,
             menuBtn,
+            menuTitleBtn,
             headerNav } = pageElements()
 
     // Функция открытия/закрытия меню
@@ -28,7 +29,7 @@ export const openMenu = () => {
     }
 
   const subMenu = () => {
-      menuArrowBtn.forEach((btn, index) => {
+      menuTitleBtn.forEach((btn, index) => {
             btn.addEventListener('click', () => {
                 for (let i = 0; i < headerMenuItem.length; i +=1) {
                     if (index === i) {
