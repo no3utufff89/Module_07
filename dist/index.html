@@ -1,1 +1,814 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ShopOnline</title><style>@charset "UTF-8";@font-face{font-family:lato;font-weight:700;font-display:swap;src:url("assets/fonts/lato-700.woff2") format("woff2"),url("assets/fonts/lato-700.woff") format("woff")}@font-face{font-family:lato;font-weight:400;font-display:swap;src:url("assets/fonts/lato-400.woff2") format("woff2"),url("assets/fonts/lato-400.woff") format("woff")}@font-face{font-family:lato;font-weight:900;font-display:swap;src:url("assets/fonts/lato-900.woff2") format("woff2"),url("assets/fonts/lato-900.woff") format("woff")}html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}main{display:block}a{background-color:transparent;-webkit-text-decoration-skip:objects}b{font-weight:inherit}b{font-weight:bolder}img{border-style:none}svg:not(:root){overflow:hidden}button,input{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button{overflow:visible}button{text-transform:none}button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}input{overflow:visible}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{position:relative;-webkit-box-sizing:border-box;box-sizing:border-box}*,::after,::before{-webkit-box-sizing:inherit;box-sizing:inherit}body{min-width:320px;min-height:100vh;font-family:lato,Arial,sans-serif;line-height:1.3;font-weight:400;color:#000;background-color:#fff;font-size:20px}img{max-width:100%;height:auto;display:block}button{padding:0;border:none;background-color:transparent}a{text-decoration:none;color:inherit}ul{list-style:none;padding:0;margin:0}h1,p{margin:0}.icon{fill:currentColor;display:block;color:#2d2d2d}.visually-hidden{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);padding:0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden}.section{padding-top:10px;padding-bottom:10px}.container{margin:0 auto;padding-left:20px;padding-right:20px}.header{padding-top:20px;padding-bottom:31px}.header__grid-row{display:grid;grid-template-rows:repeat(3,auto);grid-template-columns:auto auto;row-gap:20px}.logo{display:block}.header__logo{width:114px;height:25px;grid-area:1/1/2/3;display:-webkit-box;display:-ms-flexbox;display:flex}.menu-btn{border:none;outline:0}.header__menu-btn{font-size:12px;line-height:150%;background-color:#3670c7;color:#fff;padding-left:31px;padding-right:14px;width:79px;height:30px;border-radius:4px;position:relative}.menu-btn__line{position:absolute;left:17px;width:7px;height:2px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);background-color:#fff;opacity:1}.header__menu-btn::before,.header__menu-btn:after{content:"";position:absolute;left:17px;height:2px;background-color:#fff}.header__menu-btn::before{top:10px;width:11px}.header__menu-btn:after{width:4px;bottom:10px}.header__user-controls{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;-webkit-box-align:center;-ms-flex-align:center;align-items:center;justify-self:end}.user-controls__icon{width:30px;height:30px}.user-controls__text{display:none;font-weight:700;font-size:12px;line-height:16px}.user-controls__link{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.cart__link{position:relative}.cart__count{font-weight:700;font-size:14px;line-height:18px;position:absolute;top:-2px;right:-2px;width:14px;height:18px;background-color:#fff;border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:#3670c7}.search{height:30px;position:relative;grid-area:3/1/4/3}.search__input{position:relative;border:none;border-radius:30px;background-color:#efefef;height:100%;width:100%;padding-left:16px;padding-top:9px;padding-bottom:11px;outline:0}.search__input::-webkit-input-placeholder{font-weight:700;font-size:8px;line-height:130%;color:#8f8f8f;position:absolute;top:50%;left:16px;-webkit-transform:translate(0,-50%);transform:translate(0,-50%)}.search__input::-moz-placeholder{font-weight:700;font-size:8px;line-height:130%;color:#8f8f8f;position:absolute;top:50%;left:16px;transform:translate(0,-50%)}.search__input:-ms-input-placeholder{font-weight:700;font-size:8px;line-height:130%;color:#8f8f8f;position:absolute;top:50%;left:16px;transform:translate(0,-50%)}.search__input::-ms-input-placeholder{font-weight:700;font-size:8px;line-height:130%;color:#8f8f8f;position:absolute;top:50%;left:16px;transform:translate(0,-50%)}.search__btn{background-color:#3670c7;height:100%;width:50px;font-size:0;border:none;outline:0;border-radius:30px;position:absolute;top:0;right:0;background-image:url(assets/icons/search-icon.svg);background-repeat:no-repeat;background-position:center;background-size:20px}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{display:none}.banner{color:#fff}.banner__container{background-image:url(img/top-banner-s.png);background-repeat:no-repeat;background-position:center;height:340px;background-size:cover;display:grid;grid-template-rows:repeat(2,auto);padding-top:50px;padding-bottom:30px;justify-items:center}.banner__action{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-item-align:end;align-self:flex-end}.timer{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-column-gap:8px;-moz-column-gap:8px;column-gap:8px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.banner__text{font-weight:700;font-size:22px;line-height:29px}.timer-block{display:-webkit-box;display:-ms-flexbox;display:flex;gap:15px}.banner-action__text{margin-bottom:6px;font-weight:700;font-size:8px;line-height:10px;text-align:center}.timer__count{font-weight:700;font-size:20px;line-height:26px}.timer__units{font-weight:700;font-size:12px;line-height:16px}.promo-list{display:grid;grid-auto-flow:row dense;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));grid-auto-rows:minmax(118px,130px);gap:20px}.shoes{grid-column:span 2}.shoes-sale{grid-column:span 2;grid-row:span 2}.promo-list__link{background-repeat:no-repeat;background-position:center top;background-size:cover;border-radius:8px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%;padding:10px;font-weight:700;font-size:12px;line-height:14px;color:#fff;position:relative}.promo-item{position:relative}.promo-list__link_books{background-image:url("img/books.png");background-image:-webkit-image-set(url("img/books.png") 1x);background-image:-webkit-image-set(url("img/books.webp") 1x,url("img/books.avif") 1x);background-image:image-set(url("img/books.webp") 1x,url("img/books.avif") 1x);-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.promo-list__link_sale{background-image:url(img/sale.png);background-image:-webkit-image-set(url("img/sale.png") 1x);background-image:-webkit-image-set(url("img/sale.webp") 1x,url("img/sale.avif") 1x);background-image:image-set(url("img/sale.webp") 1x,url("img/sale.avif") 1x);padding-top:28px}.promo-list__link_shoes{background-image:url(img/shoes.png);background-image:-webkit-image-set(url("img/shoes.png") 1x);background-image:-webkit-image-set(url("img/shoes.webp") 1x,url("img/shoes.avif") 1x);background-image:image-set(url("img/shoes.webp") 1x,url("img/shoes.avif") 1x)}.promo-list__link_shoes-sale{background-image:url(img/shoes-sale.png);background-image:-webkit-image-set(url("img/shoes-sale.png") 1x);background-image:-webkit-image-set(url("img/shoes-sale.webp") 1x,url("img/shoes-sale.avif") 1x);background-image:image-set(url("img/shoes-sale.webp") 1x,url("img/shoes-sale.avif") 1x);-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.promo-item__decor_blue{background-color:#38c0eb;padding-top:9px;padding-bottom:9px;text-align:center;border-radius:8px}.promo-item__decor_blue>b{text-transform:uppercase;font-size:16px;line-height:18px;font-weight:700}.promo-item__decor_small{width:65px}.promo-item__decor_small>b{font-size:16px;font-weight:700;line-height:18px}.promo-sticker{background-color:#ffbd13;border-radius:50%;color:#fff;width:50px;height:50px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;z-index:1;position:absolute;font-size:16px;font-weight:700;line-height:21px}.promo-sticker_top{top:5px;left:5px}.promo-sticker_bottom{right:5px;bottom:5px}.template-author{grid-area:1/3/1/5}.header__nav{-webkit-box-shadow:0 4px 4px rgba(0,0,0,.2);box-shadow:0 4px 4px rgba(0,0,0,.2);border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding:20px;display:none}.header__nav-list{row-gap:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.menu-item__title{font-weight:700;font-size:20px;line-height:26px;display:block}.menu-item__block{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-column-gap:12px;-moz-column-gap:12px;column-gap:12px;margin-bottom:10px}.menu-item__btn-open{font-size:0;background-image:url(assets/icons/dropdown-arrow.svg);background-repeat:no-repeat;background-position:center 4px;mix-blend-mode:difference;width:17px;height:11px}.nav-list__link{font-size:12px;line-height:14px}.menu-item_catalog{display:grid;grid-area:1/1/1/3}.menu-item__list{height:0;overflow:hidden}.blog-card__link{grid-area:1/1/2/3}.cart-product__image{width:91px;height:91px;grid-area:1/1/3/2}.cart-product__title{font-size:12px;line-height:150%;grid-area:2/2/3/3;margin-bottom:22px}.cart-product__price{grid-area:1/2/2/3}.cart-product__controls{grid-area:3/1/4/3;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.result-products{grid-area:1/1/2/3;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.result-discount{grid-area:2/1/3/3;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.result-delivery-details{grid-area:3/1/4/3;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}@media (min-width:760px){.section{padding-top:20px;padding-bottom:20px}.container{padding-left:34px;padding-right:34px;max-width:768px}.header{padding-top:25px;padding-bottom:30px}.header__grid-row{grid-template-rows:repeat(2,auto);grid-template-columns:-webkit-max-content auto;grid-template-columns:max-content auto;row-gap:29px;-webkit-column-gap:45px;-moz-column-gap:45px;column-gap:45px}.header__logo{width:165px;height:35px;-ms-flex-item-align:center;align-self:center}.header__menu-btn{grid-area:2/1/2/2;font-size:16px;line-height:150%;padding-left:49px;padding-right:21px;width:115px;height:42px}.menu-btn__line{left:24px;width:12px}.header__menu-btn::before,.header__menu-btn:after{left:24px}.header__menu-btn::before{top:14px;width:18px}.header__menu-btn:after{bottom:14px;width:6px}.header__user-controls{grid-area:1/2/2/3;-webkit-column-gap:30px;-moz-column-gap:30px;column-gap:30px}.user-controls__text{display:block}.cart__count{top:-2px;right:7px}.search{grid-area:2/2/2/3;height:42px}.search__input{padding-left:28px}.search__input::-webkit-input-placeholder{padding-left:14px;font-size:12px;line-height:130%}.search__input::-moz-placeholder{padding-left:14px;font-size:12px;line-height:130%}.search__input:-ms-input-placeholder{padding-left:14px;font-size:12px;line-height:130%}.search__input::-ms-input-placeholder{padding-left:14px;font-size:12px;line-height:130%}.search__btn{width:82px;background-size:30px}.banner__container{padding-top:64px;background-image:url(img/top-banner-m.png);height:280px;background-position:center;padding-left:80px;padding-right:80px}.timer{-webkit-column-gap:10px;-moz-column-gap:10px;column-gap:10px}.banner__text{justify-self:start;font-size:30px;line-height:39px}.banner-action__text{font-size:12px;line-height:16px;margin-bottom:10px}.timer__count{font-size:30px;line-height:39px}.timer__units{font-size:16px;line-height:21px}.promo-list{grid-auto-rows:auto;grid-template-columns:repeat(2,140px) auto 140px;grid-template-rows:140px repeat(3,140px) 337px}.shoes-sale{grid-row:1/4;grid-column:3/5;height:380px}.promo-list__link{background-position:center top;font-size:16px;line-height:18px;padding:20px}.promo-list__link_books{padding:10px}.promo-list__link_sale{padding-top:15px}.promo-item__decor_blue{padding-top:16px;padding-bottom:16px;border-radius:12px}.promo-item__decor_blue>b{font-size:16px;line-height:29px}.promo-item__decor_small{line-height:22px;font-size:20px;width:auto}.promo-item__decor_small>b{font-size:26px;line-height:29px}.promo-sticker_top{top:10px;left:10px}.promo-sticker_bottom{right:10px;bottom:10px}.footer__logo{width:152px;height:33px;margin-bottom:40px;grid-area:1/1/1/5}.nav-wrapper{margin-bottom:53px;grid-area:2/1/2/3}.contacts-wrapper{grid-area:2/3/2/4}.rights-wrapper{grid-area:3/1/3/5;display:grid;grid-template-columns:repeat(3,1fr)}.header__nav{padding-top:30px;padding-left:34px;padding-right:34px}.header__nav-list{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.menu-item__title{font-size:26px;line-height:34px}.menu-item__block{margin-bottom:20px}.menu-item__btn-open{display:none}.nav-list__link{font-size:16px;line-height:24px}.menu-item_catalog{grid-area:1/1/1/2}.menu-item__list{height:auto}.blog-card__time-info{grid-area:2/1/3/3}.blog-card__stat{grid-area:3/1/4/3;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px}.description-container{grid-area:2/1/3/3;padding-left:0;padding-right:0}}@media (min-width:1000px){.section{padding-top:11px;padding-bottom:11px}.container{padding-left:42px;padding-right:42px;max-width:1024px}.header{padding-top:34px;padding-bottom:49px}.header__grid-row{-webkit-column-gap:89px;-moz-column-gap:89px;column-gap:89px}.header__logo{width:190px;height:41px}.header__menu-btn{width:151px;height:54px;font-size:22px;line-height:150%;padding-left:61px;padding-right:28px}.menu-btn__line{left:33px;width:12px}.header__menu-btn::before,.header__menu-btn:after{left:33px}.header__menu-btn::before{top:21px}.header__menu-btn:after{bottom:21px}.header__user-controls{-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px}.user-controls__icon{width:36px;height:36px;margin-bottom:4px}.user-controls__text{font-size:16px;line-height:130%}.cart__count{top:-2px;right:10px}.search{height:54px}.search__input{padding-left:40px}.search__input::-webkit-input-placeholder{padding-left:28px;font-size:16px;line-height:130%}.search__input::-moz-placeholder{padding-left:28px;font-size:16px;line-height:130%}.search__input:-ms-input-placeholder{padding-left:28px;font-size:16px;line-height:130%}.search__input::-ms-input-placeholder{padding-left:28px;font-size:16px;line-height:130%}.banner__container{border-radius:16px;background-image:url(img/top-banner-l.png);padding-bottom:36px}.timer{-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px}.banner__text{font-size:40px;line-height:52px}.banner-action__text{font-size:16px;line-height:21px}.timer__count{font-size:40px;line-height:52px}.timer__units{font-size:40px;line-height:52px}.promo-list{grid-template-columns:repeat(4,217px);grid-template-rows:repeat(4,217px) 418px;gap:24px}.shoes-sale{height:458px}.promo-list__link{font-size:30px;line-height:39px}.promo-list__link_books{padding-left:9px;padding-right:18px;padding-bottom:20px}.promo-list__link_sale{padding-top:58px;font-size:24px;line-height:31px}.promo-item__decor_blue{text-align:left;width:100%;padding-left:25px;padding-right:26px}.promo-item__decor_blue>b{font-size:30px;line-height:39px;text-transform:none;letter-spacing:1.5px}.promo-item__decor_small{line-height:28px;font-size:22px}.promo-item__decor_small>b{font-size:30px;line-height:39px}.promo-sticker{width:88px;height:88px;font-size:30px;line-height:39px}.header__nav{padding-top:40px;padding-left:42px;padding-right:42px}.menu-item__title{font-size:32px;line-height:42px}.menu-item__block{margin-bottom:30px}.nav-list__link{font-size:22px;line-height:33px}.product-checkbox{position:relative;grid-area:1/1/2/2;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.cart-product__image{width:130px;height:130px;grid-area:1/2/2/3}.cart-product__title{font-size:22px;line-height:150%;grid-area:1/3/2/4}.cart-product__price{margin-bottom:15px;grid-area:1/5/2/6;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.cart-product__controls{grid-area:1/4/2/5;align-self:start}.cart-delivery{grid-area:2/1/3/3}.cart-products{grid-area:1/1/2/3}.cart-result{grid-area:3/1/3/2}}</style><link rel="stylesheet" href="css/index.min.css" media="print" onload="this.media='all'"><script type="module" src="js/index.min.js"></script></head><body class="page"><header class="header"><div class="container"><div class="row header__grid-row"><a href="index.html" class="logo header__logo"><img src="./img/logo.svg" alt="Логотип магазина Shop Online"> </a><button aria-label="открыть меню" class="menu-btn header__menu-btn"><span class="menu-btn__line"></span> Меню</button><form action="#" id="search" class="search" method="post" aria-label="Строка поиска"><input type="search" class="search__input" placeholder="Я ищу..."> <button type="button" class="search__btn">Кнопка поиска</button></form><ul class="user-controls header__user-controls"><li class="user-controls__item personal"><a href="#" class="user-controls__link personal__link" aria-label="Профиль"><svg class="icon user-controls__icon personal__icon" width="36" height="36"><use href="img/sprite.svg#person-icon"></use></svg> <span class="user-controls__text">Профиль</span></a></li><li class="user-controls__item cart"><a href="shoping-cart.html" class="user-controls__link cart__link"><svg class="icon user-controls__icon cart__icon relative-icon" width="36" height="36"><use href="img/sprite.svg#cart"></use></svg> <span class="user-controls__text">Корзина </span><span class="cart__count">2</span></a></li><li class="user-controls__item favorite"><a href="#" class="user-controls__link favorite__link"><svg class="icon user-controls__icon favorite__icon" width="36" height="36"><use href="img/sprite.svg#favourite"></use></svg> <span class="user-controls__text">Избранное</span></a></li></ul></div></div><nav class="nav header__nav"><div class="header__nav-wrapper"><ul class="header__nav-list"><li class="nav-list__item menu-item menu-item_header"><div class="menu-item__block"><p class="menu-item__title">Каталог</p><button class="btn menu-item__btn-open">Развернуть список меню</button></div><ul class="header__submenu-list menu-item__list header__catalog-list"></ul></li><li class="nav-list__item menu-item menu-item_header"><div class="menu-item__block"><p class="menu-item__title">Покупателям</p><button class="btn menu-item__btn-open">Развернуть список меню</button></div><ul class="header__submenu-list menu-item__list header__buyer-list"><li class="submenu-list__item"><a href="" class="nav-list__link">Оплата заказа</a></li><li class="submenu-list__item"><a href="" class="nav-list__link">Условия доставки</a></li><li class="submenu-list__item"><a href="" class="nav-list__link">Условия возврата заказа</a></li><li class="submenu-list__item"><a href="blog.html" class="nav-list__link">Блог</a></li></ul></li><li class="nav-list__item menu-item menu-item_header"><div class="menu-item__block"><p class="menu-item__title">Связаться с нами</p><button class="btn menu-item__btn-open">Развернуть список меню</button></div><ul class="header__submenu-list menu-item__list header__catalog-list"><li class="submenu-list__item"><a href="" class="nav-list__link">Контакты</a></li></ul></li></ul></div></nav></header><main class="main index-main"><h1 class="visually-hidden">Интернет-магазин подарков и приятных вещей</h1><section class="section banner"><div class="container"><div class="banner__container" aria-label="Баннер со скидкой" tabindex="0"><p class="banner__text">-50% на все ноутбуки</p><div class="banner__action"><div class="timer" data-timer-deadline="2025/04/14 21:15"><p class="banner-action__text">До конца акции:</p><div class="timer-block"><p class="timer__item timer__days"><span class="timer__count timer__count_days">683</span> <span class="timer__units timer__units_days">дня</span></p><p class="timer__item timer__hours"><span class="timer__count timer__count_hours">02</span> <span class="timer__units timer__units_hours">часа</span></p><p class="timer__item timer__minutes"><span class="timer__count timer__count_minutes">27</span> <span class="timer__units timer__units_minutes">минут</span></p></div></div></div></div></div></section><section class="section promo"><div class="container"><ul class="promo-list"><li class="promo-list-list__item books promo-item"><a href="#" class="promo-list__link promo-list__link_books"><span class="promo-item__decor_small"><b>Книга – </b>лучший подарок</span></a></li><li class="promo-list-list__item sale promo-item"><a href="#" class="promo-list__link promo-list__link_sale">Время скидок </a><span class="promo-sticker promo-sticker_bottom" aria-hidden="false">-25%</span></li><li class="promo-list__item shoes promo-item"><a href="#" class="promo-list__link promo-list__link_shoes" aria-label="Скидка на обувь"></a> <span class="promo-sticker promo-sticker_top" aria-hidden="false">-40%</span></li><li class="promo-list__item shoes-sale promo-item"><a href="#" class="promo-list__link promo-list__link_shoes-sale"><span class="promo-item__decor_blue">Вторая пара кроссовок <b>в подарок!</b></span></a></li><li class="promo-list__item gifts promo-item"><a href="#" class="promo-list__link promo-list__link_gifts">Идеи новогодних подарков</a></li><li class="promo-list__item electronics promo-item"><a href="#" class="promo-list__link promo-list__link_electronics">Выгодно в декабре! </a><span class="promo-sticker promo-sticker_bottom" aria-hidden="false">-15%</span></li><li class="promo-list__item dress promo-item"><a href="#" class="promo-list__link promo-list__link_dress" aria-label="Женская одежда"></a> <span class="promo-sticker promo-sticker_bottom" aria-hidden="false">-55%</span></li><li class="promo-list__item chemicals promo-item"><a href="#" class="promo-list__link promo-list__link_chemicals">На бытовую химию </a><span class="promo-sticker promo-sticker_top" aria-hidden="false">-25%</span></li><li class="promo-list__item decorations promo-item"><a href="#" class="promo-list__link promo-list__link_decorations" aria-label="Елочные игрушки"></a></li><li class="promo-list__item new-year promo-item"><a href="#" class="promo-list__link promo-list__link_new-year"><span class="promo-item__decor_white">Новогодние украшения</span></a></li></ul></div></section></main><footer class="footer"><div class="container footer__container"><a href="#" class="footer__logo"><img src="img/footer-logo.svg" alt="Логотип магазин Shop Online"></a><div class="nav-wrapper"><ul class="nav-list"><li class="nav-list__item menu-item menu-item_catalog"><div class="menu-item__block" aria-label="Каталог" aria-hidden="false"><p class="menu-item__title">Каталог</p><button class="btn menu-item__btn-open">Развернуть список меню</button></div><ul class="submenu-list menu-item__list catalog-list"></ul></li><li class="nav-list__item menu-item menu-item_bayer"><div class="menu-item__block"><p class="menu-item__title">Покупателям</p><button class="btn menu-item__btn-open">Развернуть список меню</button></div><ul class="submenu-list menu-item__list buyer-list"><li class="submenu-list__item"><a href="" class="nav-list__link">Оплата заказа</a></li><li class="submenu-list__item"><a href="" class="nav-list__link">Условия доставки</a></li><li class="submenu-list__item"><a href="" class="nav-list__link">Условия возврата заказа</a></li><li class="submenu-list__item"><a href="blog.html" class="nav-list__link">Блог</a></li></ul></li></ul></div><div class="contacts-wrapper"><h2 class="contacts-wrapper__title">Контакты</h2><a href="7987987987" class="contacts-wrapper__link phone-link">Тел: +7 937 839 23-61 </a><a href="mailto:OnlineShop@gmail.com" class="contacts-wrapper__link mail-link">Email: OnlineShop@gmail.com</a><div class="social-links"><a href="https://wa.me/799999999" class="whatsapp-link social-link" aria-label="Иконка социальной сети WhatsApp"><svg class="whatsapp-link__icon social-link__icon icon" width="26" height="26"><use href="./img/sprite.svg#whatsapp-icon"></use></svg> </a><a href="https://inastargam.ory" class="instagram-link social-link" aria-label="Иконка запрещенной сети Instagram"><svg class="instagram-link__icon social-link__icon icon" width="26" height="26"><use href="./img/sprite.svg#instagram-icon"></use></svg> </a><a href="https://www.youtube.com/" class="yt-link social-link" aria-label="Иконка Youtube"><svg class="yt-link__icon social-link__icon icon" width="26" height="26"><use href="./img/sprite.svg#yt-icon"></use></svg> </a><a href="https://facebook.com" class="fb-link social-link" aria-label="Иконка социальной сети Facebook"><svg class="fb-link__icon social-link__icon icon" width="26" height="26"><use href="./img/sprite.svg#fb-icon"></use></svg> </a><a href="https://t.me/7999999999" class="telegram-link social-link" aria-label="Иконка социальной сети Telegram"><svg class="telegram-link__icon social-link__icon icon" width="26" height="26"><use href="./img/sprite.svg#telegram-icon"></use></svg></a></div></div><div class="rights-wrapper"><p class="registered">© OnlineShop, 2021</p><div class="template-author"><p class="template-author__name">Design by Anastasia Ilina</p><a class="template-author__link" href="https://t.me/7999999999">Tg: @Mrshmallowww</a></div></div></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopOnline</title>
+    <link rel="stylesheet" href="css/index.min.css">
+
+    <script type="module" src="js/index.min.js"></script>
+</head>
+<body class="page">
+<header class="header">
+    <div class="container">
+        <div class="row header__grid-row">
+            <a href="index.html" class="logo header__logo">
+                <img src="./img/logo.svg" alt="Логотип магазина Shop Online">
+            </a>
+            <button aria-label="открыть меню" class="menu-btn header__menu-btn">
+                <span class="menu-btn__line"></span>
+               Меню
+            </button>
+            <form action="#" id="search" class="search" method="post" aria-label="Строка поиска">
+                <input type="search" class="search__input" placeholder="Я ищу...">
+                <button type="button" class="search__btn">Кнопка поиска</button>
+            </form>
+            <ul class="user-controls header__user-controls">
+                <li class="user-controls__item personal">
+                    <a href="#" class="user-controls__link personal__link" aria-label="Профиль">
+                        <svg class="icon user-controls__icon personal__icon" width="36" height="36">
+                            <use href="img/sprite.svg#person-icon"></use>
+                        </svg>
+                        <span class="user-controls__text">
+                        Профиль
+                    </span>
+                    </a>
+                </li>
+                <li class="user-controls__item cart">
+                    <a href="shoping-cart.html" class="user-controls__link cart__link">
+                        <svg class="icon user-controls__icon cart__icon relative-icon" width="36" height="36">
+                            <use href="img/sprite.svg#cart"></use>
+                        </svg>
+                        <span class="user-controls__text ">
+                        Корзина
+                    </span>
+                        <span class="cart__count">2</span>
+                    </a>
+                </li>
+                <li class="user-controls__item favorite">
+                    <a href="#" class="user-controls__link favorite__link">
+                        <svg class="icon user-controls__icon favorite__icon" width="36" height="36">
+                            <use href="img/sprite.svg#favourite"></use>
+                        </svg>
+                        <span class="user-controls__text">
+                        Избранное
+                    </span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+    <nav class="nav header__nav">
+        <div class="header__nav-wrapper">
+            <ul class="header__nav-list">
+                <li class="nav-list__item menu-item menu-item_header">
+                    <div class="menu-item__block">
+                        <p class="menu-item__title">Каталог</p>
+                        <button class="btn menu-item__btn-open">Развернуть список меню</button>
+                    </div>
+                    <ul class="header__submenu-list menu-item__list header__catalog-list">
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Смартфоны-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Ноутбуки-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Ювелирные изделия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Одежда-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая техника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая химия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Книги и журналы-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Домашний текстиль-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Электроника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Косметика-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Одежда-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая техника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая химия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Книги и журналы-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Домашний текстиль-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Электроника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Ювелирные изделия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Одежда-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая техника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая химия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Книги и журналы-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Домашний текстиль-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Электроника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Косметика-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Одежда-->
+<!--                            </a>-->
+<!--                        </li>-->
+                    </ul>
+                </li>
+                <li class="nav-list__item menu-item menu-item_header">
+                    <div class="menu-item__block">
+                        <p class="menu-item__title">Покупателям</p>
+                        <button class="btn menu-item__btn-open">Развернуть список меню</button>
+                    </div>
+                    <ul class="header__submenu-list menu-item__list header__buyer-list">
+                        <li class="submenu-list__item">
+                            <a href="" class="nav-list__link">
+                                Оплата заказа
+                            </a>
+                        </li>
+                        <li class="submenu-list__item">
+                            <a href="" class="nav-list__link">
+                                Условия доставки
+                            </a>
+                        </li>
+                        <li class="submenu-list__item">
+                            <a href="" class="nav-list__link">
+                                Условия возврата заказа
+                            </a>
+                        </li>
+                        <li class="submenu-list__item">
+                            <a href="blog.html" class="nav-list__link">
+                                Блог
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-list__item menu-item menu-item_header">
+                    <div class="menu-item__block">
+                        <p class="menu-item__title">Связаться с нами</p>
+                        <button class="btn menu-item__btn-open">Развернуть список меню</button>
+                    </div>
+                    <ul class="header__submenu-list menu-item__list header__catalog-list">
+                        <li class="submenu-list__item">
+                            <a href="" class="nav-list__link">
+                                Контакты
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="main index-main">
+    <h1 class="visually-hidden">Интернет-магазин подарков и приятных вещей</h1>
+    <section class="section banner">
+        <div class="container">
+            <div class="banner__container" aria-label="Баннер со скидкой" tabindex="0">
+                <p class="banner__text">
+                    -50% на все ноутбуки
+                </p>
+                <div class="banner__action">
+                    <div class="timer" data-timer-deadline="2025/04/14 21:15">
+                        <p class="banner-action__text">До конца акции:</p>
+                        <div class="timer-block">
+                            <p class="timer__item timer__days">
+                                <span class="timer__count timer__count_days">683</span>
+                                <span class="timer__units timer__units_days">дня</span>
+                            </p>
+                            <p class="timer__item timer__hours">
+                                <span class="timer__count timer__count_hours">02</span>
+                                <span class="timer__units timer__units_hours">часа</span>
+                            </p>
+                            <p class="timer__item timer__minutes">
+                                <span class="timer__count timer__count_minutes">27</span>
+                                <span class="timer__units timer__units_minutes">минут</span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section promo">
+        <div class="container">
+            <ul class="promo-list">
+                <li class="promo-list-list__item books promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_books">
+                        <span class="promo-item__decor_small"><b>Книга – </b>лучший подарок</span>
+                    </a>
+                </li>
+                <li class="promo-list-list__item sale promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_sale">
+                        Время скидок
+                    </a>
+                    <span class="promo-sticker promo-sticker_bottom" aria-hidden="false">-25%</span>
+                </li>
+                <li class="promo-list__item shoes promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_shoes" aria-label="Скидка на обувь">
+                    </a>
+                    <span class="promo-sticker promo-sticker_top" aria-hidden="false">-40%</span>
+                </li>
+                <li class="promo-list__item shoes-sale promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_shoes-sale">
+                        <span class="promo-item__decor_blue">
+                            Вторая пара кроссовок <b> в подарок!</b>
+                        </span>
+                    </a>
+                </li>
+                <li class="promo-list__item gifts promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_gifts">
+                        Идеи новогодних подарков
+                    </a>
+                </li>
+                <li class="promo-list__item electronics promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_electronics">
+                        Выгодно в декабре!
+                    </a>
+                    <span class="promo-sticker promo-sticker_bottom" aria-hidden="false">-15%</span>
+                </li>
+                <li class="promo-list__item dress promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_dress"
+                       aria-label="Женская одежда">
+                    </a>
+                    <span class="promo-sticker promo-sticker_bottom" aria-hidden="false">-55%</span>
+                </li>
+                <li class="promo-list__item chemicals promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_chemicals">
+                        На бытовую химию
+                    </a>
+                    <span class="promo-sticker promo-sticker_top" aria-hidden="false">-25%</span>
+                </li>
+                <li class="promo-list__item decorations promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_decorations"
+                       aria-label="Елочные игрушки">
+                    </a>
+                </li>
+                <li class="promo-list__item new-year promo-item">
+                    <a href="#" class="promo-list__link promo-list__link_new-year">
+                        <span class="promo-item__decor_white">
+                            Новогодние украшения
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+<!--    <section class="section profit">-->
+<!--        <div class="container">-->
+<!--            <h2 class="section-title profit__title">-->
+<!--                Это выгодно!-->
+<!--            </h2>-->
+<!--            <ul class="profit-goods-list">-->
+<!--                <li class="profit-goods-list__item">-->
+<!--                    <a href="" class="profit-card">-->
+<!--                        <div class="profit-card__header relative">-->
+<!--                            <picture aria-hidden="true">-->
+<!--                                <source srcset="img/prod_01.webp" type="image/webp">-->
+<!--                                <source srcset="img/prod_01.avif" type="image/avif">-->
+<!--                                <img src="img/prod_01.jpg" alt="описание" class="profit-card__image"/>-->
+<!--                            </picture>-->
+<!--                            <span class="promo-sticker promo-sticker_profit">-50%</span>-->
+<!--                        </div>-->
+<!--                        <div class="profit-card__footer">-->
+<!--                            <div class="price">-->
+<!--                                <div class="new-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        1299-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                                <div class="old-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        2598-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="profit-card__title">-->
+<!--                                Пара футболок-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="profit-goods-list__item">-->
+<!--                    <a href="" class="profit-card">-->
+<!--                        <div class="profit-card__header relative">-->
+<!--                            <picture aria-hidden="true">-->
+<!--                                <source srcset="img/prod_01.webp" type="image/webp">-->
+<!--                                <source srcset="img/prod_01.avif" type="image/avif">-->
+<!--                                <img src="img/prod_01.jpg" alt="описание" class="profit-card__image"/>-->
+<!--                            </picture>-->
+<!--                            <span class="promo-sticker promo-sticker_profit">-50%</span>-->
+<!--                        </div>-->
+<!--                        <div class="profit-card__footer">-->
+<!--                            <div class="price">-->
+<!--                                <div class="new-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        1299-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                                <div class="old-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        2598-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="profit-card__title">-->
+<!--                                Пара футболок-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="profit-goods-list__item">-->
+<!--                    <a href="" class="profit-card">-->
+<!--                        <div class="profit-card__header relative">-->
+<!--                            <picture>-->
+<!--                                <source srcset="img/prod_01.webp" type="image/webp">-->
+<!--                                <source srcset="img/prod_01.avif" type="image/avif">-->
+<!--                                <img src="img/prod_01.jpg" alt="описание" class="profit-card__image"/>-->
+<!--                            </picture>-->
+<!--                            <span class="promo-sticker promo-sticker_profit">-50%</span>-->
+<!--                        </div>-->
+<!--                        <div class="profit-card__footer">-->
+<!--                            <div class="price">-->
+<!--                                <div class="new-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        1299-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                                <div class="old-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        2598-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="profit-card__title">-->
+<!--                                Пара футболок-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="profit-goods-list__item">-->
+<!--                    <a href="" class="profit-card">-->
+<!--                        <div class="profit-card__header relative">-->
+<!--                            <picture>-->
+<!--                                <source srcset="img/prod_01.webp" type="image/webp">-->
+<!--                                <source srcset="img/prod_01.avif" type="image/avif">-->
+<!--                                <img src="img/prod_01.jpg" alt="описание" class="profit-card__image"/>-->
+<!--                            </picture>-->
+<!--                            <span class="promo-sticker promo-sticker_profit">-50%</span>-->
+<!--                        </div>-->
+<!--                        <div class="profit-card__footer">-->
+<!--                            <div class="price">-->
+<!--                                <div class="new-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        1299-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                                <div class="old-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        2598-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="profit-card__title">-->
+<!--                                Пара футболок-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="profit-goods-list__item">-->
+<!--                    <a href="" class="profit-card">-->
+<!--                        <div class="profit-card__header relative">-->
+<!--                            <picture>-->
+<!--                                <source srcset="img/prod_01.webp" type="image/webp">-->
+<!--                                <source srcset="img/prod_01.avif" type="image/avif">-->
+<!--                                <img src="img/prod_01.jpg" alt="описание" class="profit-card__image"/>-->
+<!--                            </picture>-->
+<!--                            <span class="promo-sticker promo-sticker_profit">-50%</span>-->
+<!--                        </div>-->
+<!--                        <div class="profit-card__footer">-->
+<!--                            <div class="price">-->
+<!--                                <div class="new-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        1299-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                                <div class="old-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        2598-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="profit-card__title">-->
+<!--                                Пара футболок-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="profit-goods-list__item">-->
+<!--                    <a href="" class="profit-card">-->
+<!--                        <div class="profit-card__header relative">-->
+<!--                            <picture>-->
+<!--                                <source srcset="img/prod_01.webp" type="image/webp">-->
+<!--                                <source srcset="img/prod_01.avif" type="image/avif">-->
+<!--                                <img src="img/prod_01.jpg" alt="описание" class="profit-card__image"/>-->
+<!--                            </picture>-->
+<!--                            <span class="promo-sticker promo-sticker_profit">-50%</span>-->
+<!--                        </div>-->
+<!--                        <div class="profit-card__footer">-->
+<!--                            <div class="price">-->
+<!--                                <div class="new-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        1299-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                                <div class="old-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        2598-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="profit-card__title">-->
+<!--                                Пара футболок-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="profit-goods-list__item">-->
+<!--                    <a href="" class="profit-card">-->
+<!--                        <div class="profit-card__header relative">-->
+<!--                            <picture>-->
+<!--                                <source srcset="img/prod_01.webp" type="image/webp">-->
+<!--                                <source srcset="img/prod_01.avif" type="image/avif">-->
+<!--                                <img src="img/prod_01.jpg" alt="описание" class="profit-card__image"/>-->
+<!--                            </picture>-->
+<!--                            <span class="promo-sticker promo-sticker_profit">-50%</span>-->
+<!--                        </div>-->
+<!--                        <div class="profit-card__footer">-->
+<!--                            <div class="price">-->
+<!--                                <div class="new-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        1299-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                                <div class="old-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        2598-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="profit-card__title">-->
+<!--                                Пара футболок-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="profit-goods-list__item">-->
+<!--                    <a href="" class="profit-card">-->
+<!--                        <div class="profit-card__header relative">-->
+<!--                            <picture>-->
+<!--                                <source srcset="img/prod_01.webp" type="image/webp">-->
+<!--                                <source srcset="img/prod_01.avif" type="image/avif">-->
+<!--                                <img src="img/prod_01.jpg" alt="описание" class="profit-card__image"/>-->
+<!--                            </picture>-->
+<!--                            <span class="promo-sticker promo-sticker_profit">-50%</span>-->
+<!--                        </div>-->
+<!--                        <div class="profit-card__footer">-->
+<!--                            <div class="price">-->
+<!--                                <div class="new-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        1299-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                                <div class="old-price">-->
+<!--                                    <p class="new-price__text">-->
+<!--                                        2598-->
+<!--                                    </p>-->
+<!--                                    <p class="price-currency">₽</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="profit-card__title">-->
+<!--                                Пара футболок-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </section>-->
+
+    <!--    <picture>-->
+    <!--      <source srcset="img/1984-768.avif" type="image/avif" media="(min-width: 768px)">-->
+    <!--      <source srcset="img/1984.avif" type="image/avif">-->
+    <!--      <source srcset="img/1984-768.webp" type="image/webp" media="(min-width: 768px)">-->
+    <!--      <source srcset="img/1984.webp" type="image/webp">-->
+    <!--      <source srcset="img/1984-768.jpg" media="(min-width: 768px)">-->
+    <!--      <img src="img/1984.jpg" alt="">-->
+    <!--    </picture>-->
+
+</main>
+<footer class="footer">
+    <div class="container footer__container">
+        <a href="#" class="footer__logo">
+            <img src="img/footer-logo.svg" alt="Логотип магазин Shop Online">
+        </a>
+        <div class="nav-wrapper">
+            <ul class="nav-list">
+                <li class="nav-list__item menu-item menu-item_catalog">
+                    <div class="menu-item__block" aria-label="Каталог" aria-hidden="false">
+                        <p class="menu-item__title" >Каталог</p>
+                        <button class="btn menu-item__btn-open">Развернуть список меню</button>
+                    </div>
+                    <ul class="submenu-list menu-item__list catalog-list">
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Смартфоны-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Ноутбуки-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Ювелирные изделия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Одежда-->
+<!--                            </a>-->
+<!--                        </li>-->
+
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая техника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая химия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Книги и журналы-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Домашний текстиль-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Электроника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Косметика-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Смартфоны-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Ноутбуки-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Ювелирные изделия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Одежда-->
+<!--                            </a>-->
+<!--                        </li>-->
+
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая техника-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Бытовая химия-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Книги и журналы-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Домашний текстиль-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="submenu-list__item">-->
+<!--                            <a href="" class="nav-list__link">-->
+<!--                                Электроника-->
+<!--                            </a>-->
+<!--                        </li>-->
+
+
+                    </ul>
+                </li>
+                <li class="nav-list__item menu-item menu-item_bayer">
+                    <div class="menu-item__block">
+                        <p class="menu-item__title">Покупателям</p>
+                        <button class="btn menu-item__btn-open">Развернуть список меню</button>
+                    </div>
+                    <ul class="submenu-list menu-item__list buyer-list">
+                        <li class="submenu-list__item">
+                            <a href="" class="nav-list__link">
+                                Оплата заказа
+                            </a>
+                        </li>
+                        <li class="submenu-list__item">
+                            <a href="" class="nav-list__link">
+                                Условия доставки
+                            </a>
+                        </li>
+                        <li class="submenu-list__item">
+                            <a href="" class="nav-list__link">
+                                Условия возврата заказа
+                            </a>
+                        </li>
+                        <li class="submenu-list__item">
+                            <a href="blog.html" class="nav-list__link">
+                                Блог
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="contacts-wrapper">
+            <h2 class="contacts-wrapper__title">
+                Контакты
+            </h2>
+            <a href="7987987987" class="contacts-wrapper__link phone-link">
+                Тел: +7 937 839 23-61
+            </a>
+            <a href="mailto:OnlineShop@gmail.com" class="contacts-wrapper__link mail-link">
+                Email: OnlineShop@gmail.com
+            </a>
+            <div class="social-links">
+                <a href="https://wa.me/799999999" class="whatsapp-link social-link"
+                   aria-label="Иконка социальной сети WhatsApp">
+                    <svg class="whatsapp-link__icon social-link__icon icon" width="26" height="26">
+                        <use href="./img/sprite.svg#whatsapp-icon"></use>
+                    </svg>
+                </a>
+                <a href="https://inastargam.ory" class="instagram-link social-link"
+                   aria-label="Иконка запрещенной сети Instagram">
+                    <svg class="instagram-link__icon social-link__icon icon" width="26" height="26">
+                        <use href="./img/sprite.svg#instagram-icon"></use>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/" class="yt-link social-link"
+                   aria-label="Иконка Youtube">
+                    <svg class="yt-link__icon social-link__icon icon" width="26" height="26">
+                        <use href="./img/sprite.svg#yt-icon"></use>
+                    </svg>
+
+                </a>
+                <a href="https://facebook.com" class="fb-link social-link"
+                   aria-label="Иконка социальной сети Facebook">
+                    <svg class="fb-link__icon social-link__icon icon" width="26" height="26">
+                        <use href="./img/sprite.svg#fb-icon"></use>
+                    </svg>
+                </a>
+                <a href="https://t.me/7999999999" class="telegram-link social-link"
+                   aria-label="Иконка социальной сети Telegram">
+                    <svg class="telegram-link__icon social-link__icon icon" width="26" height="26">
+                        <use href="./img/sprite.svg#telegram-icon"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="rights-wrapper">
+            <p class="registered">
+                © OnlineShop, 2021
+            </p>
+            <div class="template-author">
+                <p class="template-author__name">
+                    Design by Anastasia Ilina
+                </p>
+                <a class="template-author__link" href="https://t.me/7999999999">
+                    Tg: @Mrshmallowww
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

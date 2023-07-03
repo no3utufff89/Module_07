@@ -241,7 +241,6 @@ export const createProductDetailedCard = (data) => {
 }
 
 export const createBreadCrumbs = (props) => {
-    console.log(props)
     const searchParamsData = new  URLSearchParams(window.location.search);
     const id = new  URLSearchParams(window.location.search).get('id')
     const category = new  URLSearchParams(window.location.search).get('category')
@@ -252,12 +251,9 @@ export const createBreadCrumbs = (props) => {
     const filtredCrumbsArr = crumbsArr.filter(item => item !== id)
 
     const propsArr = Object.values(props)
-    console.log(`propsArr`,propsArr)
     const resultCrumbsArr = [...propsArr, ...filtredCrumbsArr];
-    console.log(resultCrumbsArr)
 
     const breadCrumbsItem = propsArr.map(item => {
-        console.log(`length`,resultCrumbsArr.length)
         if (item.href) {
             const breadCrumbsItem = el('li.bread-crumbs__item',
                 el('a.bread-crumbs__link', {

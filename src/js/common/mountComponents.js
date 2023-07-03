@@ -11,11 +11,11 @@ export const mountComponents = (path) => {
 
     const category = new  URLSearchParams(window.location.search).get('category')
     const title = new  URLSearchParams(window.location.search).get('title')
-    if (path === '/' || path === '/Module_07/index.html') {
+    if (path === '/' || path === '/index.html') {
 
         renderProfitProducts()
     }
-    if (path === '/Module_07/category.html') {
+    if (path === '/category.html') {
         document.title = `ShopOnline - ${new  URLSearchParams(window.location.search).get('category')}`;
         renderCategoryProducts()
         document.querySelector('main').append(createBreadCrumbs(
@@ -25,7 +25,7 @@ export const mountComponents = (path) => {
             ]
         ))
     }
-    if (path === '/Module_07/card.html') {
+    if (path === '/card.html') {
         document.title = new  URLSearchParams(window.location.search).get('title');
         renderCurrentProduct()
 
@@ -37,7 +37,7 @@ export const mountComponents = (path) => {
         renderFeaturedProducts()
     }
 
-    if (path === '/Module_07/shoping-cart.html') {
+    if (path === '/shoping-cart.html') {
         renderShoppingCart()
         renderProfitProducts()
 
